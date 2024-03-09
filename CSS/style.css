@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+/*Reset CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+html, body{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+a:hover{
+    opacity: 1;
+    font-size: 1.1rem;
+}
+
+header{
+    background-color: white;
+    position: fixed;
+    top:0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+div.logo{
+    display: flex;
+    align-items: center;
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.texto-logo{
+    font-family: "Dancing Script", cursive, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+div.logo span{
+    padding-left: 5px;
+}
+
+ul#menu{
+    display: flex;
+    flex-direction: row;
+}
+
+ul#menu li{
+    padding: 10px;
+    margin-right: 10px;
+}
+
+ul#menu li a{
+    color: black;
+}
+
+div#tela-inicial{
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../imagens/pexels-capa.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+div#tela-inicial h1{
+    margin-bottom: 15px;
+    font-size:2rem;
+}
+
+div#tela-inicial h3{
+    margin-bottom: 15px;
+    font-size:1.5rem;
+}
+
+button{
+    height: 40px;
+    width: 120px;
+    border-radius: 4px;
+    border: none;
+}
+
+button a{
+    color: black;
+}
+
+div#descricao{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div#descricao p{
+    max-width: 60vw;
+    margin: 10px 0;
+}
+
+div#imagens{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 300px 300px; /*linhas de 250px de altura*/
+    gap: 10px;
+
+    grid-template-areas: 
+                        "img1 img2 img2"
+                        "img3 img3 img4" ;
+}
+
+.img1{
+    grid-area: img1;
+    background: black url("../imagens/pexels-hotel-p.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.img2{
+    grid-area: img2;
+    background: black url("../imagens/pexels-praia-coqueiro-p.jpg") right bottom no-repeat;
+    background-size: cover;
+}
+
+.img3{
+    grid-area: img3;
+    background: black url("../imagens/pexels-praia-p.jpg") right center;
+    background-size: cover;
+
+}
+
+.img4{
+    grid-area: img4;
+    background: black url("../imagens/pexels-por-sol-p.jpg") right center;
+    background-size: cover;
+}
+
+div#extra{
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;        
+}
+
+div#extra-texto{
+    color: white;
+}
+
+div#extra-texto h2{
+    padding: 20px 0;
+}
+
+div#extra-texto p{
+    max-width: 60%;
+    margin: auto;
+    padding: 10px;    
+}
+
+div#extra-texto hr{
+    margin: 10px 0;
+    width: 40%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%);
+    background-color: white;
+}
+
+div#extra-icones{
+    display: flex;
+    margin-top: 30px;
+}
+
+div.extra-icone p{
+    color: white;
+    font-size: 0.8rem;
+}
+
+div#newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+}
+
+div#newsletter h1{
+    padding-bottom: 10px;
+}
+
+div#newsletter p{
+    max-width: 60%;
+}
+
+input{
+    width: 40vw;
+    height: 30px;
+}
+
+div#form{
+    margin: 10px;
+}
+
+div#form button{
+    height: 30px;
+    background-color: black;
+}
+
+#form button a{
+    color: yellowgreen;    
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+footer i{
+    color: yellowgreen;
+    padding: 10px;
+}
+
+footer p{
+    color: white;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width:600px){
+    header{
+        flex-direction: column;
+    }
+
+    div.logo{
+        margin-bottom: 15px;
+    }
+
+    div#tela-inicial h1{
+        font-size: 1.5em;
+    }
+
+    div#tela-inicial h3{
+        font-size: 1em;
+    }
+
+    div#imagens{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 250px);
+        gap: 10px;
+    
+        grid-template-areas: 
+                            "img1"
+                            "img2"
+                            "img3"
+                            "img4";
+    }
+    
+    div#extra-icones{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#extra-texto h1{
+        font-size: 1.5rem;
+    }
+
+    div#extra-texto p{
+        font-size: 1rem;
+    }
+    
+    div.extra-icone{
+        color: white;
+        margin-top: 10px;
+    }
+    
+    div.extra-icone p{
+        color: white;
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
